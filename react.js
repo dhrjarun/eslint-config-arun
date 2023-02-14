@@ -10,12 +10,23 @@ module.exports = {
         extensions: ['.mjs', '.js', '.jsx', '.json', '.ts', '.tsx', '.d.ts'],
       },
     },
-    rules: {
-      // for typescript support in react https://github.com/iamturns/eslint-config-airbnb-typescript/blob/master/index.js#L4-L18
-      // Append 'tsx' to Airbnb 'react/jsx-filename-extension' rule
-      // Original: ['.jsx']
-      'react/jsx-filename-extension': ['error', { extensions: ['.jsx', '.tsx'] }],
-    },
   },
   plugins: ['react', 'react-hooks', 'jsx-a11y'],
+  rules: {
+    // for typescript support in react https://github.com/iamturns/eslint-config-airbnb-typescript/blob/master/index.js#L4-L18
+    // Append 'tsx' to Airbnb 'react/jsx-filename-extension' rule
+    // Original: ['.jsx']
+    'react/jsx-filename-extension': ['error', { extensions: ['.jsx', '.tsx'] }],
+
+    // personal preferences
+    'react/jsx-props-no-spreading': [
+      'error',
+      {
+        html: 'enforce',
+        custom: 'ignore',
+        explicitSpread: 'ignore',
+        exceptions: [],
+      },
+    ],
+  },
 };
