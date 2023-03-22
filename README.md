@@ -2,8 +2,9 @@
 
 My eslint config
 
-It uses [airbnb style guide](https://airbnb.io/javascript/).
-Inspired from <https://github.com/chaance/eslint-config-chance>
+Forked from <https://github.com/chaance/eslint-config-chance>
+
+This is not opinionated about styling, formatting and only cares about writing error-free code
 
 ## Installation
 
@@ -15,15 +16,12 @@ pnpm add @typescript-eslint/parser@^5.0.0 @typescript-eslint/eslint-plugin@^5.13
 
 # react rules
 pnpm add eslint-plugin-react@^7.28.0 eslint-plugin-react-hooks@^4.3.0 eslint-plugin-jsx-a11y@^6.5.1 --save-dev
-
-# jest rules
-pnpm add eslint-plugin-jest@^27.2.1 eslint-plugin-jest-dom@^4.0.3 eslint-plugin-testing-library@^5.10.1 --save-dev
 ```
 
 ## Usage
 
 ```json
 {
-    extends: ['arun', 'arun/typescript', 'arun/react']
+  "extends": ["arun", "arun/typescript", "arun/react"]
 }
 ```
